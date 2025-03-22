@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Apology</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            color: #555;
+            text-align: left;
+        }
+        .memories {
+            margin-top: 40px;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+        .slides {
+            display: none;
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+        }
+        .active {
+            display: block;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            border-radius: 5px;
+            transform: translateY(-50%);
+        }
+        .next {
+            right: 10px;
+        }
+        .prev {
+            left: 10px;
+        }
+        .prev:hover, .next:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+        #password-container {
+            margin-bottom: 30px;
+        }
+        #password {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        button.submit {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="password-container">
+            <h2>Enter Password to View the Letter</h2>
+            <input type="password" id="password" placeholder="Enter password...">
+            <p class="hint">Hint: It was the name of our old gc (Sonam named it)</p>
+            <button class="submit" onclick="checkPassword()">Submit</button>
+            <div id="error" class="error"></div>
+        </div>
+
+        <div id="letter" style="display:none;">
+            <h1>I’m Truly Sorry</h1>
+            <p>Hey Madeline,</p>
+            <p>I’ve been thinking about reaching out for a while now, and I know I might not even have the right to ask for your time, but I still wanted to say what’s been on my heart.</p>
+            <p>I just want to start by saying that I’m truly sorry. I know that what I have done may hurt you and many others, and I take full responsibility for it. There hasn’t been a day that I haven’t thought about how much I regret my actions and how I wish I had handled things differently. The last thing I ever wanted was to lose you as a friend, and yet, I know that my choices led us here.</p>
+            <p>You were never just a friend to me, you felt like a sister I never had, and losing that has been one of the hardest things I’ve had to face. I don’t expect things to go back to how they were, and I don’t expect you to forgive me if you’re not ready or don’t want to. More than anything, I just want you to know that I see the hurt I caused, and I’m so, so sorry for it.</p>
+            <p>I know I’ve done a terrible thing to you and to many others. I wish I could change that, but I can’t. When it all first happened, I thought I was so cool. I was blinded by ego and foolishness and I became someone toxic without realizing how much I was hurting the very people who cared about me. Every friendship, every mark I made, I took it for granted. That’s why I understand if I disgust you now. But I want you to know—you were always a great friend to me. So were the others. And I genuinely wish you all nothing but the best. You deserve peace, happiness, and good people around you.</p>
+            <p>I just hope you won’t remember me by the worst things I did. I hope that if anything ever does come back to mind, you’ll also remember the good parts. Because those were real too.</p>
+            <p>If you ever speak with Fly, please tell her I’m truly sorry for what I did. I wish I could reverse the bad memories she carries of me—I really do. What I did was simply an act of carelessness, and there is no justification for it. She didn’t deserve any of the discomfort I caused, and I should have been respectful of that.</p>
+            <p>Anyway, I don’t want to make this apology too long, so I’ll wrap things up. I am currently writing this on March of 2025, which means that as you're reading this, years could have already passed. It doesn’t matter when, it only matters that you find this message at a time when it might bring you understanding.</p>
+            <p>I also understand and respect the boundaries you’ve set, and if you’d prefer not to respond, I won’t push. I just hope that, even if we never speak again, you can know that I truly valued our friendship, and I will always appreciate the time we had.</p>
+            <p>No matter what, I hope you’re doing okay. I want nothing but the best for you, and if you ever decide to reach out—even if it’s years from now, I’ll always be here.</p>
+            <p>With sincerity, Joey/Elvis</p>
+
+            <!-- Memories Section with Manual Slideshow -->
+            <div class="memories">
+                <h2>Memories We Shared</h2>
+                <div class="slideshow-container">
+                    <img class="slides active" src="media/memories1.jpg">
+                    <img class="slides" src="media/memories2.jpg">
+                    <img class="slides" src="media/memories3.jpg">
+                    <img class="slides" src="media/memories4.jpg">
+                    <img class="slides" src="media/memories5.jpg">
+                    <img class="slides" src="media/memories6.jpg">
+                    <img class="slides" src="media/memories7.jpg">
+                    <img class="slides" src="media/image1.jpg">
+                    <img class="slides" src="media/Screenshot_20190826-1941292.jpg">
+                    <img class="slides" src="media/memories9.jpg">
+                    <img class="slides" src="media/memories10.jpg">
+                    <img class="slides" src="media/funnyimage.jpg">
+                    <img class="slides" src="media/funnyimage3.jpg">
+                    <img class="slides" src="media/image0.jpg">
+                    <img class="slides" src="media/funnyimage4.jpg">
+                    <img class="slides" src="media/memories11.jpg">
+                    <img class="slides" src="media/memories12.jpg">
+                    <img class="slides" src="media/memories13.jpg">
+                    <img class="slides" src="media/funnyimage7.jpg">
+                    <img class="slides" src="media/funnyimage5.jpg">
+                    <img class="slides" src="media/funnyimage6.jpg">
+                    <img class="slides" src="media/memories14.jpg">
+                    <img class="slides" src="media/memories15.jpg">
+                    <img class="slides" src="media/memories16.jpg">
+                    <img class="slides" src="media/memories18.jpg">
+                    <img class="slides" src="media/funnyimage8.jpg">
+                    <img class="slides" src="media/memories19.jpg">
+                    <img class="slides" src="media/drawing1.jpg">
+                    <img class="slides" src="media/drawing2.jpg">
+                    <img class="slides" src="media/drawing3.jpg">
+                    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function normalize(str) {
+            return str.toLowerCase().replace(/\s+/g, '');
+        }
+
+        function checkPassword() {
+            const input = document.getElementById("password").value;
+            const normalizedInput = normalize(input);
+            const correctPassword = normalize("soy sauce");
+
+            if (normalizedInput === correctPassword) {
+                document.getElementById("password-container").style.display = "none";
+                document.getElementById("letter").style.display = "block";
+            } else {
+                document.getElementById("error").textContent = "Incorrect password. Please try again.";
+            }
+        }
+
+        let slideIndex = 0;
+        let slides = document.getElementsByClassName("slides");
+
+        function changeSlide(n) {
+            slides[slideIndex].classList.remove("active");
+            slideIndex += n;
+            if (slideIndex >= slides.length) { slideIndex = 0; }
+            if (slideIndex < 0) { slideIndex = slides.length - 1; }
+            slides[slideIndex].classList.add("active");
+        }
+    </script>
+</body>
+</html>
